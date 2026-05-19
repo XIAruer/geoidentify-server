@@ -122,7 +122,7 @@ const minerals = [
 const history: any[] = [];
 
 // 图片识别接口
-router.post('/identify', upload.single('image'), async (req: express.Request, res: express.Response) => {
+router.post('/', upload.single('image'), async (req: express.Request, res: express.Response) => {
   try {
     if (!req.file) {
       res.status(400).json({ error: '请上传图片' });
