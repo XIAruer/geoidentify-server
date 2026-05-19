@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
-import fetchRouter from "./routes/fetch";
-import identifyRouter from "./routes/identify";
+import fetchRouter from "./routes/fetch.js";
+import identifyRouter from "./routes/identify.js";
 import path from "path";
 import fs from "fs";
 
