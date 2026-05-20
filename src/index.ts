@@ -27,6 +27,11 @@ app.use(express.urlencoded({ limit: '50mb', extended: true }));
 // 静态文件服务
 app.use('/uploads', express.static(uploadDir));
 
+// 矿物图片静态目录
+const publicDir = path.join(process.cwd(), 'public');
+const mineralsDir = path.join(publicDir, 'minerals');
+app.use('/minerals', express.static(mineralsDir));
+
 app.get('/api/v1/health', (req, res) => {
   console.log('Health check success');
   res.status(200).json({ status: 'ok' });
